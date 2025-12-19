@@ -412,7 +412,7 @@ else{
 }#END OF ELSE
 
 #File Output
-$Script:outputFile = ($Script_Parent + "\$($folderName)\RemoveSnapshots_HCPVMware_$($currentDate)_VC.txt") 
+$Script:outputFile = ($Script_Parent + "\$($folderName)\RemoveSnapshots_Auto_$($currentDate)_VC.txt") 
 
 
 foreach ($vcName in $vcNameList)
@@ -425,5 +425,6 @@ foreach ($vcName in $vcNameList)
     Disconnect-ViServer -Server $script:WorkingServer -Force -Confirm:$false -ErrorAction SilentlyContinue
     
 }#end of ForEach vCenter
+
 
 Write-Host "End of Script" -ForegroundColor White -BackgroundColor Red
